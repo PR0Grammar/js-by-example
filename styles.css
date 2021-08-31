@@ -1,0 +1,43 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    margin: 0;
+}
+
+a,p,li {
+    color:black;
+}
+
+html{
+    justify-content: center;
+}
+
+body{
+    max-width: 800px;
+    flex-direction: column;
+    padding-right:24px;
+    padding-left:24px;
+    align-items: flex-start;
+}
+
+li{
+    list-style:none;
+    margin-top:4px;
+    margin-bottom: 4px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+#footer{
+    flex:1;
+    display:flex;
+    align-items: flex-end;
+}
+
+#footer > div, #footer > div > a{
+    color:gray;
+}
