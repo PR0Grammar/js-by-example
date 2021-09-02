@@ -4,14 +4,15 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background: #0a2540;
 }
 
 * {
     font-family: 'Menlo';
+    color: white;
 }
 
 p {
-    color: #252519;
     font-size: 20px;
 }
 
@@ -21,18 +22,29 @@ body {
 
 ::-webkit-scrollbar {
     width: 0px;
+    height: 0px;
     background: transparent;
 }
 
 a {
     text-decoration: none;
-    color: black;
 }
+
+/* Header */
 
 #header {
     font-size: 32px;
-    margin-bottom: 32x;
+    margin-bottom: 32px;
     margin-left: 12px;
+}
+
+#header-line {
+    margin-left: 20px;
+    height: 10px;
+    width: 75px;
+    background-color: #ff5c5c;
+    border-radius: 20px;
+    margin-bottom: 4px;
 }
 
 /* Content Container */
@@ -40,12 +52,14 @@ a {
 #content-container {
     display: flex;
     flex: 1;
+    min-height: 0
 }
 
 /* Code Desc */
 
 #code-description {
     flex: 1;
+    overflow-y: scroll;
 }
 
 #code-description>p {
@@ -57,8 +71,9 @@ a {
 #code-container {
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 0px 20px #acacac;
+    box-shadow: 0px 0px 4px #acacac;
     flex: 1;
+    border-radius: 8px 8px 0px 0px;
 }
 
 /* Code Editor*/
@@ -76,9 +91,13 @@ a {
 }
 
 .code-editor-line {
-    margin-top: 6px;
+    margin-top: 40px;
     margin-bottom: 6px;
     margin-left: 8px;
+}
+
+.code-editor-line~.code-editor-line {
+    margin-top: 6px;
 }
 
 .code-editor-line-index {
@@ -91,6 +110,9 @@ a {
 }
 
 #code-editor-top-button-container {
+    background-color: #0c2e4e;
+    z-index: 2;
+    position: absolute;
     height: 30px;
     width: 100%;
     display: flex;
@@ -129,6 +151,8 @@ a {
     border: 1px solid #0f395e;
     display: flex;
     flex-direction: column;
+    color: white;
+    overflow: scroll;
 }
 
 .console-line {
@@ -150,6 +174,10 @@ a {
 
 .console-line-bool {
     color: #2e71ff;
+}
+
+.console-line-weird-val {
+    color: #7561ff;
 }
 
 #console-enter-cmd-container {
