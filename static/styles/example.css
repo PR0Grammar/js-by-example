@@ -74,11 +74,6 @@ a {
     margin-top: 6px;
 }
 
-.code-editor-line-index {
-    color: #55718d;
-    user-select: none;
-}
-
 #code-editor-top-button-container {
     background-color: #0c2e4e;
     z-index: 2;
@@ -109,6 +104,32 @@ a {
 
 #code-editor-expand-button {
     background: #00ca56;
+}
+
+.code-editor-line-index {
+    color: #55718d;
+    user-select: none;
+    margin-right: 12px;
+}
+
+.code-editor-keyword {
+    color: #bc70fd;
+}
+
+.code-editor-normal {
+    color: white;
+}
+
+.code-editor-string {
+    color: #f5eea2;
+}
+
+.code-editor-bool {
+    color: #7561ff;
+}
+
+.code-editor-number {
+    color: #ed6e55;
 }
 
 /* Console */
