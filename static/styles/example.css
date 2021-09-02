@@ -60,16 +60,17 @@ a {
     justify-content: start;
     align-items: start;
     border-radius: 8px 8px 0px 0px;
+}
+
+#code-editor-content {
     overflow-y: scroll;
+    width: 100%;
+    margin-top: 40px;
 }
 
 .code-editor-line {
-    margin-top: 40px;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
     margin-left: 8px;
-}
-
-.code-editor-line~.code-editor-line {
     margin-top: 6px;
 }
 
