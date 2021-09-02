@@ -24,3 +24,17 @@ html, body {
     border-radius: 20px;
     margin-bottom: 4px;
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+}
+
+::-webkit-scrollbar-corner, ::-webkit-resizer {
+    width: 0px;
+    height: 0px;
+}

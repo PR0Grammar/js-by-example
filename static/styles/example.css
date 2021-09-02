@@ -6,12 +6,6 @@ body {
     flex-direction: column;
 }
 
-::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-    background: transparent;
-}
-
 a {
     text-decoration: none;
 }
@@ -51,6 +45,8 @@ a {
     box-shadow: 0px 0px 4px #acacac;
     flex: 1;
     border-radius: 8px 8px 0px 0px;
+    margin-right: 12px;
+    margin-bottom: 12px;
 }
 
 /* Code Editor*/
@@ -64,7 +60,7 @@ a {
     justify-content: start;
     align-items: start;
     border-radius: 8px 8px 0px 0px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .code-editor-line {
@@ -82,20 +78,14 @@ a {
     user-select: none;
 }
 
-.code-editor-keyword {
-    color: pink;
-}
-
 #code-editor-top-button-container {
     background-color: #0c2e4e;
     z-index: 2;
-    position: absolute;
+    position: fixed;
     height: 30px;
-    width: 100%;
     display: flex;
     align-items: center;
     border-radius: 8px 8px 0px 0px;
-    border-bottom: 1px solid white;
     margin-bottom: 6px;
 }
 
@@ -129,7 +119,7 @@ a {
     display: flex;
     flex-direction: column;
     color: white;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .console-line {
