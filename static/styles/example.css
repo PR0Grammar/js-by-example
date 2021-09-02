@@ -40,6 +40,11 @@ a {
     flex: 1;
 }
 
+#code-description>p {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
 #code-editor {
     flex: 1;
     background-color: #0c2e4e;
@@ -49,6 +54,7 @@ a {
     flex-direction: column;
     justify-content: start;
     align-items: start;
+    border-radius: 5px 5px 0px 0px;
     overflow: scroll;
 }
 
@@ -65,4 +71,36 @@ a {
 
 .code-editor-keyword {
     color: pink;
+}
+
+/* Code editor top button menu */
+
+#code-editor-top-button-container {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 1px solid white;
+    margin-bottom: 6px;
+}
+
+.code-editor-top-button {
+    height: 15px;
+    width: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+#code-editor-close-button {
+    background: #ff5c5c;
+}
+
+#code-editor-minimize-button {
+    background: #ffbd4c;
+}
+
+#code-editor-expand-button {
+    background: #00ca56;
 }

@@ -1,7 +1,7 @@
 function values() {
     console.log(123);
 
-    console.log(123.321)
+    console.log(123.321);
 
     console.log('JS by Example');
 
@@ -11,10 +11,9 @@ function values() {
 
     console.log(true, false);
 
-    console.log(NaN)
+    console.log(NaN);
 
-    console.log(10.5e8)
+    console.log(10.5e8);
 
-    console.log("Beyond", -Infinity, Infinity)
-
+    console.log("Beyond", -Infinity, Infinity);
 }
