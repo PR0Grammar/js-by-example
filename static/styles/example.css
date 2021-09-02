@@ -6,6 +6,10 @@ html, body {
     padding: 0;
 }
 
+* {
+    font-family: 'Menlo';
+}
+
 p {
     color: #252519;
     font-size: 20px;
@@ -31,10 +35,14 @@ a {
     margin-left: 12px;
 }
 
+/* Content Container */
+
 #content-container {
     display: flex;
     flex: 1;
 }
+
+/* Code Desc */
 
 #code-description {
     flex: 1;
@@ -43,18 +51,27 @@ a {
 #code-description>p {
     margin-left: 12px;
     margin-right: 12px;
+    margin-bottom: 95px;
 }
 
-#code-editor {
+#code-container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 20px #acacac;
     flex: 1;
+}
+
+/* Code Editor*/
+
+#code-editor {
     background-color: #0c2e4e;
-    height: 50%;
+    height: 60%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 8px 8px 0px 0px;
     overflow: scroll;
 }
 
@@ -73,14 +90,12 @@ a {
     color: pink;
 }
 
-/* Code editor top button menu */
-
 #code-editor-top-button-container {
     height: 30px;
     width: 100%;
     display: flex;
     align-items: center;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 8px 8px 0px 0px;
     border-bottom: 1px solid white;
     margin-bottom: 6px;
 }
@@ -91,6 +106,7 @@ a {
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 #code-editor-close-button {
@@ -103,4 +119,64 @@ a {
 
 #code-editor-expand-button {
     background: #00ca56;
+}
+
+/* Console */
+
+#console {
+    background: #06182c;
+    flex: 1;
+    border: 1px solid #0f395e;
+    display: flex;
+    flex-direction: column;
+}
+
+.console-line {
+    min-height: 30px;
+    border-bottom: 1px solid #FFFFFF;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+}
+
+.console-line-string {
+    color: #080
+}
+
+.console-line-number {
+    color: #066;
+}
+
+.console-line-bool {
+    color: #2e71ff;
+}
+
+#console-enter-cmd-container {
+    font-size: 20px;
+    user-select: none;
+    color: white;
+    font-weight: bolder;
+    margin-top: 8px;
+}
+
+#console-cmd-arrow {
+    padding: 4px;
+}
+
+#console-blinking-cursor {
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: #ffffff;
+    }
 }
