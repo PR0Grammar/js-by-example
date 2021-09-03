@@ -1,4 +1,7 @@
 /styles/* /static/styles/:splat 200!
+/fonts/* /static/fonts/:splat 200!
+/images/* /static/images/:splat 200!
+
 
 /hello-world /static/pages/hello-world.html 200
 
