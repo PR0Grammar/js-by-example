@@ -29,6 +29,10 @@ html, body {
     width: 8px;
 }
 
+::-webkit-scrollbar:horizontal {
+    height: 8px;
+}
+
 ::-webkit-scrollbar-thumb {
     background-color: #babac0;
     border-radius: 16px;
@@ -37,4 +41,18 @@ html, body {
 ::-webkit-scrollbar-corner, ::-webkit-resizer {
     width: 0px;
     height: 0px;
+}
+
+#footer {
+    margin-top: 8px;
+    font-size: 16px;
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#footer, #footer>p {
+    color: gray;
+    font-size: 16px;
 }

@@ -6,8 +6,8 @@ body {
     flex-direction: column;
 }
 
-a {
-    text-decoration: none;
+code {
+    background-color: gray;
 }
 
 /* Header */
@@ -16,6 +16,10 @@ a {
     font-size: 32px;
     margin-bottom: 32px;
     margin-left: 12px;
+}
+
+#header>a {
+    text-decoration: none;
 }
 
 /* Content Container */
@@ -30,6 +34,7 @@ a {
 
 #code-description {
     flex: 1;
+    width: 50%;
     overflow-y: scroll;
 }
 
@@ -46,6 +51,7 @@ a {
     flex: 1;
     border-radius: 8px 8px 0px 0px;
     margin-right: 12px;
+    width: 50%;
     margin-bottom: 12px;
 }
 
@@ -66,12 +72,14 @@ a {
     overflow-y: scroll;
     width: 100%;
     margin-top: 40px;
+    flex: 1;
 }
 
 .code-editor-line {
     margin-bottom: 12px;
     margin-left: 8px;
     margin-top: 6px;
+    white-space: nowrap;
 }
 
 #code-editor-top-button-container {
@@ -132,6 +140,10 @@ a {
     color: #ed6e55;
 }
 
+.code-editor-space {
+    margin-left: 4px;
+}
+
 /* Console */
 
 #console {
@@ -145,28 +157,29 @@ a {
 }
 
 .console-line {
-    min-height: 30px;
     border-bottom: 1px solid #FFFFFF;
     font-size: 14px;
     display: flex;
     align-items: center;
-    padding: 6px;
+    padding: 20px;
+    white-space: nowrap;
+    flex-wrap: wrap;
 }
 
 .console-line-string {
-    color: #080
+    color: #f5eea2;
 }
 
 .console-line-number {
-    color: #066;
+    color: #ed6e55;
 }
 
 .console-line-bool {
-    color: #2e71ff;
+    color: #7561ff;
 }
 
 .console-line-weird-val {
-    color: #7561ff;
+    color: #bc70fd;
 }
 
 #console-enter-cmd-container {
