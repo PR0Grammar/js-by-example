@@ -1,4 +1,4 @@
-/styles/* /static/styles 200!
+/styles/* /static/styles/:splat 200!
 
 /hello-world /static/pages/hello-world.html 200
 
