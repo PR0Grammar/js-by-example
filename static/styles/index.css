@@ -1,0 +1,31 @@
+h2>a {
+    text-decoration: none;
+}
+
+html {
+    justify-content: center;
+}
+
+body {
+    min-height: 100%;
+    max-width: 800px;
+    flex-direction: column;
+    padding-right: 24px;
+    padding-left: 24px;
+    align-items: flex-start;
+}
+
+li {
+    list-style: none;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+#footer {
+    flex: 1;
+}
