@@ -33,8 +33,7 @@ code {
 /* Code Desc */
 
 #code-description {
-    flex: 1;
-    width: 50%;
+    width: 40%;
     overflow-y: scroll;
 }
 
@@ -51,7 +50,7 @@ code {
     flex: 1;
     border-radius: 8px 8px 0px 0px;
     margin-right: 12px;
-    width: 50%;
+    width: 60%;
     margin-bottom: 12px;
 }
 
