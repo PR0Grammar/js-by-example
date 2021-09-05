@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--INSERT topic name here --->
 
-    <title>Values | JS by Example</title>
+    <title>Data Types | JS by Example</title>
     <link rel=stylesheet href="../styles/common.css">
     <link rel=stylesheet href="../styles/example.css">
     <link rel="shortcut icon" type="image/png" href="../images/javascript_favicon.png">
@@ -16,7 +16,7 @@
 <body>
     <div>
         <!--INSERT topic name here --->
-        <h2 id='header'><a href="./">Javascript by Example: Hello World!</a></h2>
+        <h2 id='header'><a href="./">Javascript by Example: Data Types</a></h2>
         <div id='header-line'></div>
     </div>
     <div id="content-container">
@@ -42,13 +42,18 @@
                 Boolean is a logical value that can only be one of two values: <code>true</code> or <code>false</code>
             </p>
             <p>
-                Undefined is a value that is automatically assigned to variables.
+                Undefined is a value that is automatically assigned to variables or arguments of a function when no
+                <i>actual</i> argument is passed.
             </p>
             <p>
-                Strings are sequences of characters.
+                A Symbol is created using the factory function <code>Symbol()</code>. The function takes an optional
+                string, and returns a new <code>symbol</code>. Symbols are dynamically produced and are anonymous,
+                unique values. No two symbols are equal.
             </p>
             <p>
-                Strings are sequences of characters.
+                Null, in JS, represents the intentional absence of a value. In other words, <code>null</code> is
+                explictly assigned to represent no value, while <code>undefined</code> is implicitly assigned to
+                represent that there has been no assignment in value.
             </p>
         </div>
         <div id="code-container">
@@ -60,7 +65,7 @@
                     <a href='./'>
                         <div class="code-editor-top-button" id="code-editor-minimize-button"></div>
                     </a>
-                    <a target="_blank" href="https://codepen.io/pr0grammar-the-selector/pen/abwZXqq">
+                    <a target="_blank" href="https://codepen.io/pr0grammar-the-selector/pen/GREjYab?editors=1111">
                         <div class="code-editor-top-button" id="code-editor-expand-button"> </div>
                     </a>
                 </div>
@@ -68,9 +73,7 @@
                 <div id="code-editor-content">
                     <div class='code-editor-line'>
                         <span class="code-editor-line-index">1</span>
-                        <span class='code-editor-keyword'>function </span>
-                        <span class='code-editor-normal'>helloWorld() </span>
-                        <span class='code-editor-normal'>{</span>
+                        <span class='code-editor-comment'>// Strings</span>
                     </div>
                     <div class='code-editor-line'>
                         <span class="code-editor-line-index">2</span>
@@ -109,7 +112,7 @@
         <p>
             by <a target="_blank" href="https://www.nehalp.com">NP Zed</a> | <a
                 href="https://github.com/PR0Grammar/js-by-example" target="_blank">source</a> | <a target="_blank"
-                href="https://codepen.io/pr0grammar-the-selector/pen/abwZXqq">open in online editor</a>
+                href="https://codepen.io/pr0grammar-the-selector/pen/GREjYab?editors=1111">open in online editor</a>
         </p>
     </div>
 

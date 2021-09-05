@@ -144,6 +144,10 @@ code {
     margin-left: 4px;
 }
 
+.code-editor-comment {
+    color: gray;
+}
+
 /* Console */
 
 #console {
