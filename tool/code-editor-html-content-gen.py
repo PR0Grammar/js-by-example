@@ -2,6 +2,20 @@
 import sys
 import os
 
+JS_KEY_WORDS = set(["await", "break", "case", "catch", "class", "const", "continue", "debugger", "default", "delete", "do", "else", "enum", "export", "extends", "false", "finally", "for", "function", "if", "implements", "import", "in", "instanceof", "interface", "let", "new", "null", "package", "private", "protected", "public", "return", "super", "switch", "static", "this", "throw", "try", "True", "typeof", "var", "void", "while", "with", "yield"])
+
+def genSpaceItem():
+    return
+
+def genWeirdValItem():
+    return
+
+def genKeywordItem():
+    return
+
+def genNumberItem():
+    return
+
 def addLine(line_indx):
     return """
         <div class="code-editor-line">
