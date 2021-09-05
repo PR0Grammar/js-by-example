@@ -80,6 +80,8 @@ code {
     margin-left: 8px;
     margin-top: 6px;
     white-space: nowrap;
+    width: 24px;
+    height: 16px;
 }
 
 #code-editor-top-button-container {
@@ -136,12 +138,20 @@ code {
     color: #7561ff;
 }
 
+.code-editor-weird-val {
+    color: #7561ff;
+}
+
 .code-editor-number {
     color: #ed6e55;
 }
 
 .code-editor-space {
     margin-left: 4px;
+}
+
+.code-editor-comment {
+    color: gray;
 }
 
 /* Console */

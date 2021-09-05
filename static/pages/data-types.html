@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--INSERT topic name here --->
+
+    <title>Data Types | JS by Example</title>
+    <link rel=stylesheet href="../styles/common.css">
+    <link rel=stylesheet href="../styles/example.css">
+    <link rel="shortcut icon" type="image/png" href="../images/javascript_favicon.png">
+
+</head>
+
+<body>
+    <div>
+        <!--INSERT topic name here --->
+        <h2 id='header'><a href="./">Javascript by Example: Data Types</a></h2>
+        <div id='header-line'></div>
+    </div>
+    <div id="content-container">
+        <div id="code-description">
+            <!--INSERT <p/> here for code desc-->
+            <p>
+                There are 7 primitive data types: <code>string</code>, <code>number</code>, <code>bigint</code>,
+                <code>boolean</code>, <code>undefined</code>, <code>symbol</code> and <code>null</code>. In JS, a
+                primitive is data that is not an object and does not contain any methods. All primitives are
+                <strong>immutable</strong> (in other words, they cannot be changed).
+            </p>
+            <p>
+                Strings are sequences of characters. JS supports single quote strings (<code>''</code>), double quote
+                strings (<code>""</code>), and
+                template strings using backticks (<code>``</code>).
+            </p>
+            <p>
+                Number, in JS, is a numeric data type that is double-precision 64-bit floating point.
+            </p>
+            <p>
+                BigInt is the other numeric primitive available in JS. It is used primarily to represent whole numbers
+                larger than 2^53 - 1 (the maximum safe integer available from Number). They are created using the
+                <code>BigInt</code> constructor or appending <code>n</code> to a number literal.
+            </p>
+            <p>
+                Boolean is a logical value that can only be one of two values: <code>true</code> or <code>false</code>
+            </p>
+            <p>
+                Undefined is a value that is automatically assigned to variables or arguments of a function when no
+                <i>actual</i> argument is passed.
+            </p>
+            <p>
+                A Symbol is created using the factory function <code>Symbol()</code>. The function takes an optional
+                string, and returns a new <code>symbol</code>. Symbols are dynamically produced and are anonymous,
+                unique values. No two symbols are equal.
+            </p>
+            <p>
+                Null, in JS, represents the intentional absence of a value. In other words, <code>null</code> is
+                explictly assigned to represent no value, while <code>undefined</code> is implicitly assigned and
+                represents that there has been no assignment in value.
+            </p>
+        </div>
+        <div id="code-container">
+            <div id="code-editor">
+                <div id="code-editor-top-button-container">
+                    <a href='./'>
+                        <div class="code-editor-top-button" id="code-editor-close-button"></div>
+                    </a>
+                    <a href='./'>
+                        <div class="code-editor-top-button" id="code-editor-minimize-button"></div>
+                    </a>
+                    <a target="_blank" href="https://codepen.io/pr0grammar-the-selector/pen/GREjYab?editors=1111">
+                        <div class="code-editor-top-button" id="code-editor-expand-button"> </div>
+                    </a>
+                </div>
+                <!--INSERT code lines here -->
+                <div id="code-editor-content">
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">1</span>
+                        <span class='code-editor-comment'>// Strings</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">2</span>
+                        <span class="code-editor-normal">console.log(<span
+                                class="code-editor-string">"Strings"</span>);</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">3</span>
+                        <span class="code-editor-normal">console.log(String(<span
+                                class="code-editor-number">123321</span>));</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">4</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">5</span>
+                        <span class='code-editor-comment'>// Numbers</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">6</span>
+                        <span class="code-editor-normal">console.log(<span
+                                class="code-editor-number">123</span>);</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">7</span>
+                        <span class="code-editor-normal">console.log(<span
+                                class="code-editor-number">3.14159265</span>);</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">8</span>
+                        <span class="code-editor-normal">console.log(Number(<span
+                                class="code-editor-number">123</span>));</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">9</span>
+                        <span class="code-editor-normal">console.log(Number(<span
+                                class="code-editor-string">"123"</span>));</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">10</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">11</span>
+                        <span class='code-editor-comment'>// BigInt</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">12</span>
+                        <span class="code-editor-normal">console.log(<span
+                                class="code-editor-number">10000000000000000000000000000000n</span>);</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">13</span>
+                        <span class="code-editor-normal">console.log(BigInt(<span
+                                class="code-editor-string">"10000000000000000000000000000000"</span>));</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">14</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">15</span>
+                        <span class='code-editor-comment'>// Booleans</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">16</span>
+                        <span class="code-editor-normal">console.log(<span class="code-editor-bool">true</span>);</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">17</span>
+                        <span class="code-editor-normal">console.log(<span
+                                class="code-editor-bool">false</span>);</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">18</span>
+                        <span class="code-editor-normal">console.log(Boolean(<span
+                                class="code-editor-bool">true</span>));</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">19</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">20</span>
+                        <span class='code-editor-comment'>// Undefined</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">21</span>
+                        <span class="code-editor-normal">console.log(<span
+                                class="code-editor-weird-val">undefined</span>);</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">22</span>
+                        <span class="code-editor-normal"><span class="code-editor-keyword">let </span>x;
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">23</span>
+                        <span class="code-editor-normal">console.log(x);</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">24</span>
+                        <span class='code-editor-keyword'>function </span>
+                        <span class='code-editor-normal'>emptyArg(a) </span>
+                        <span class='code-editor-normal'>{</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">25</span>
+                        <span class='code-editor-space'></span>
+                        <span class='code-editor-space'></span>
+                        <span class='code-editor-space'></span>
+                        <span class='code-editor-space'></span>
+                        <span class="code-editor-normal">console.log(a);</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">26</span>
+                        <span class="code-editor-normal">}</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">27</span>
+                        <span class="code-editor-normal">emptyArg();</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">28</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">29</span>
+                        <span class='code-editor-comment'>// Symbols</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">30</span>
+                        <span class="code-editor-normal">console.log(Symbol());</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">31</span>
+                        <span class="code-editor-normal">console.log(Symbol(<span class="code-editor-string">"with
+                                string"</span>));</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">32</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">33</span>
+                        <span class='code-editor-comment'>// Null</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">34</span>
+                        <span class="code-editor-normal">console.log(<span
+                                class="code-editor-weird-val">null</span>);</span>
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">35</span>
+                        <span class="code-editor-normal"><span class="code-editor-keyword">let </span>y = <span
+                                class="code-editor-weird-val">null</span>;
+                    </div>
+                    <div class='code-editor-line'>
+                        <span class="code-editor-line-index">36</span>
+                        <span class="code-editor-normal">console.log(y);</span>
+                    </div>
+                </div>
+            </div>
+            <div id="console">
+                <!--INSERT console lines here -->
+                <div class="console-line"><span class='console-line-string'>"Strings"</span></div>
+                <div class="console-line"><span class='console-line-string'>"123321"</span></div>
+                <div class="console-line"><span class='console-line-number'>123</span></div>
+                <div class="console-line"><span class='console-line-number'>3.14159265</span></div>
+                <div class="console-line"><span class='console-line-number'>123</span></div>
+                <div class="console-line"><span class='console-line-number'>123</span></div>
+                <div class="console-line"><span class='console-line-number'>10000000000000000000000000000000n</span>
+                </div>
+                <div class="console-line"><span class='console-line-number'>10000000000000000000000000000000n</span>
+                </div>
+                <div class="console-line"><span class='console-line-bool'>true</span></div>
+                <div class="console-line"><span class='console-line-bool'>false</span></div>
+                <div class="console-line"><span class='console-line-bool'>true</span></div>
+                <div class="console-line"><span class='console-line-weird-val'>undefined</span></div>
+                <div class="console-line"><span class='console-line-weird-val'>undefined</span></div>
+                <div class="console-line"><span class='console-line-weird-val'>undefined</span></div>
+                <div class="console-line"><span class='console-line-weird-val'>Symbol()</span></div>
+                <div class="console-line"><span class='console-line-weird-val'>Symbol(with string)</span></div>
+                <div class="console-line"><span class='console-line-weird-val'>null</span></div>
+                <div class="console-line"><span class='console-line-weird-val'>null</span></div>
+                <div id="console-enter-cmd-container">
+                    <span id=console-cmd-arrow>> </span>
+                    <span id="console-blinking-cursor">|</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <!--Add the source to the file-->
+        <p>
+            by <a target="_blank" href="https://www.nehalp.com">NP Zed</a> | <a
+                href="https://github.com/PR0Grammar/js-by-example" target="_blank">source</a> | <a target="_blank"
+                href="https://codepen.io/pr0grammar-the-selector/pen/GREjYab?editors=1111">open in online editor</a>
+        </p>
+    </div>
+
+</body>
+
+</html>
