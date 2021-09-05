@@ -1,12 +1,12 @@
 // Strings
-console.log("Strings!");
+console.log("Strings");
 console.log(String(123321));
 
 // Numbers
 console.log(123);
 console.log(3.14159265);
 console.log(Number(123));
-console.log(Number('123'));
+console.log(Number("123"));
 
 // BigInt
 console.log(10000000000000000000000000000000n);
@@ -33,4 +33,4 @@ console.log(Symbol("with string"));
 // Null
 console.log(null);
 let y = null;
-console.log(x);
+console.log(y);

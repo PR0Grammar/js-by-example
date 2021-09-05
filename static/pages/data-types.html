@@ -29,14 +29,17 @@
                 <strong>immutable</strong> (in other words, they cannot be changed).
             </p>
             <p>
-                Strings are sequences of characters.
+                Strings are sequences of characters. JS supports single quote strings (<code>''</code>), double quote
+                strings (<code>""</code>), and
+                template strings using backticks (<code>``</code>).
             </p>
             <p>
                 Number, in JS, is a numeric data type that is double-precision 64-bit floating point.
             </p>
             <p>
                 BigInt is the other numeric primitive available in JS. It is used primarily to represent whole numbers
-                larger than 2^53 - 1 (the maximum safe integer available from the Number primitive type).
+                larger than 2^53 - 1 (the maximum safe integer available from Number). They are created using the
+                <code>BigInt</code> constructor or appending <code>n</code> to a number literal.
             </p>
             <p>
                 Boolean is a logical value that can only be one of two values: <code>true</code> or <code>false</code>
@@ -52,8 +55,8 @@
             </p>
             <p>
                 Null, in JS, represents the intentional absence of a value. In other words, <code>null</code> is
-                explictly assigned to represent no value, while <code>undefined</code> is implicitly assigned to
-                represent that there has been no assignment in value.
+                explictly assigned to represent no value, while <code>undefined</code> is implicitly assigned and
+                represents that there has been no assignment in value.
             </p>
         </div>
         <div id="code-container">
@@ -233,7 +236,26 @@
             </div>
             <div id="console">
                 <!--INSERT console lines here -->
-                <div class="console-line"><span class='console-line-string'>"Hello World!"</span></div>
+                <div class="console-line"><span class='console-line-string'>"Strings"</span></div>
+                <div class="console-line"><span class='console-line-string'>"123321"</span></div>
+                <div class="console-line"><span class='console-line-number'>123</span></div>
+                <div class="console-line"><span class='console-line-number'>3.14159265</span></div>
+                <div class="console-line"><span class='console-line-number'>123</span></div>
+                <div class="console-line"><span class='console-line-number'>123</span></div>
+                <div class="console-line"><span class='console-line-number'>10000000000000000000000000000000n</span>
+                </div>
+                <div class="console-line"><span class='console-line-number'>10000000000000000000000000000000n</span>
+                </div>
+                <div class="console-line"><span class='console-line-bool'>true</span></div>
+                <div class="console-line"><span class='console-line-bool'>false</span></div>
+                <div class="console-line"><span class='console-line-bool'>true</span></div>
+                <div class="console-line"><span class='console-line-weird-val'>undefined</span></div>
+                <div class="console-line"><span class='console-line-weird-val'>undefined</span></div>
+                <div class="console-line"><span class='console-line-weird-val'>undefined</span></div>
+                <div class="console-line"><span class='console-line-weird-val'>Symbol()</span></div>
+                <div class="console-line"><span class='console-line-weird-val'>Symbol(with string)</span></div>
+                <div class="console-line"><span class='console-line-weird-val'>null</span></div>
+                <div class="console-line"><span class='console-line-weird-val'>null</span></div>
                 <div id="console-enter-cmd-container">
                     <span id=console-cmd-arrow>> </span>
                     <span id="console-blinking-cursor">|</span>
