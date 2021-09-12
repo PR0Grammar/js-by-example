@@ -9,7 +9,12 @@ body {
 
 code {
   background-color: #909090;
-  padding: 1px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+  color: black;
+  font-weight: 600;
 }
 
 /* Header */
