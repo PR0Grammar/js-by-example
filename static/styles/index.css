@@ -1,31 +1,35 @@
-h2>a {
-    text-decoration: none;
+h2 > a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
 }
 
 html {
-    justify-content: center;
+  justify-content: center;
 }
 
 body {
-    min-height: 100%;
-    max-width: 800px;
-    flex-direction: column;
-    padding-right: 24px;
-    padding-left: 24px;
-    align-items: flex-start;
+  min-height: 100%;
+  max-width: 800px;
+  flex-direction: column;
+  padding-right: 24px;
+  padding-left: 24px;
+  align-items: flex-start;
 }
 
 li {
-    list-style: none;
-    margin-top: 16px;
-    margin-bottom: 16px;
+  list-style: none;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 ul {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 #footer {
-    flex: 1;
+  flex: 1;
 }
