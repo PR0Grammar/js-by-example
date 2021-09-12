@@ -40,17 +40,26 @@
             target="_blank"
           >
             here</a
-          >. Common cases are shown in this example: string representing a
-          number value when compared to the number itself evaluates to
-          <code>true</code>. Values that are considered <b>falsy</b> in JS that
-          are compared using <code>==</code> evaluates to <code>true</code>.
-          Falsy values in JS are values that are considered
-          <code>false</code> in the context of booleans. In JS, these values
-          include: <code>false</code>, <code>0</code>, <code>-0</code>,
-          <code>0n</code>, <code>""</code>, <code>null</code>,
-          <code>undefined</code>, and <code>NaN</code>. An array compared to a
-          string that is equal to the values in the array separated by a
-          comma(",") evalues to <code>true</code>.
+          >. Common cases are shown in this example:
+        </p>
+        <p>
+          (a) string representing a number value when compared to the number
+          itself evaluates to
+          <code>true</code>.
+        </p>
+        <p>
+          (b) Values that are considered <b>falsy</b> in JS that are compared
+          using <code>==</code> evaluates to <code>true</code>. Falsy values in
+          JS are values that are considered <code>false</code> in the context of
+          booleans. In JS, these values include: <code>false</code>,
+          <code>0</code>, <code>-0</code>, <code>0n</code>, <code>""</code>,
+          <code>null</code>, <code>undefined</code>, and <code>NaN</code>. The
+          exception to this rule is <code>NaN</code>, which compared to any
+          falsy value, including <code>NaN</code>, returns <code>false</code>
+        </p>
+        <p>
+          (c) An array compared to a string that is equal to the values in the
+          array separated by a comma(",") evalues to <code>true</code>.
         </p>
         <p>
           Strict equality (<code>===</code>) compares two values
@@ -71,63 +80,6 @@
         </p>
       </div>
       <div id="code-container">
-        <div id="code-editor">
-          <div id="code-editor-top-button-container">
-            <a href="./">
-              <div
-                class="code-editor-top-button"
-                id="code-editor-close-button"
-              ></div>
-            </a>
-            <a href="./">
-              <div
-                class="code-editor-top-button"
-                id="code-editor-minimize-button"
-              ></div>
-            </a>
-            <a
-              target="_blank"
-              href="https://codepen.io/pr0grammar-the-selector/pen/abwZXqq"
-            >
-              <div
-                class="code-editor-top-button"
-                id="code-editor-expand-button"
-              ></div>
-            </a>
-          </div>
-          <!--INSERT code lines here -->
-          <div id="code-editor-content">
-            <div class="code-editor-line">
-              <span class="code-editor-line-index">1</span>
-              <span class="code-editor-keyword">function </span>
-              <span class="code-editor-normal">helloWorld() </span>
-              <span class="code-editor-normal">{</span>
-            </div>
-            <div class="code-editor-line">
-              <span class="code-editor-line-index">2</span>
-              <span class="code-editor-space"></span>
-              <span class="code-editor-space"></span>
-              <span class="code-editor-space"></span>
-              <span class="code-editor-space"></span>
-              <span class="code-editor-normal"
-                >console.log(<span class="code-editor-string"
-                  >"Hello World!"</span
-                >);</span
-              >
-            </div>
-            <div class="code-editor-line">
-              <span class="code-editor-line-index">3</span>
-              <span class="code-editor-normal">}</span>
-            </div>
-            <div class="code-editor-line">
-              <span class="code-editor-line-index">4</span>
-            </div>
-            <div class="code-editor-line">
-              <span class="code-editor-line-index">5</span>
-              <span class="code-editor-normal">helloWorld();</span>
-            </div>
-          </div>
-        </div>
         <div id="console">
           <!--INSERT console lines here -->
           <div class="console-line">
