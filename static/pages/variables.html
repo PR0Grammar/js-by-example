@@ -53,8 +53,8 @@
         </p>
         <p>
           <code>let</code> and <code>const</code> are almost exactly the same -
-          the only difference is <code>let</code> variables can be reassigned
-          while <const>const</const> variables cannot be reassigned.
+          the only difference is <code>let</code> variables can be reassigned,
+          while <code>const</code> variables cannot be reassigned.
         </p>
       </div>
 
@@ -723,7 +723,23 @@
           </div>
         </div>
         <div id="console">
-          <!--- TODO --->
+          <div class="console-line">
+            <span class="console-line-weird-val">undefined</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-string">"hello"</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-string">"world"</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-string">"haha"</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-error"
+              >ReferenceError: Cannot access 'd' before initialization</span
+            >
+          </div>
         </div>
       </div>
     </div>

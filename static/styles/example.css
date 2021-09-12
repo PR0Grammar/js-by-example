@@ -198,6 +198,10 @@ code {
   color: #bc70fd;
 }
 
+.console-line-error {
+  color: red;
+}
+
 #console-enter-cmd-container {
   font-size: 20px;
   user-select: none;
