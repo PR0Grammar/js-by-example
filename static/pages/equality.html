@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--INSERT topic name here --->
+
+    <title>Equality | JS by Example</title>
+    <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/example.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../images/javascript_favicon.png"
+    />
+  </head>
+
+  <body>
+    <div>
+      <!--INSERT topic name here --->
+      <h2 id="header"><a href="./">Javascript by Example: Equality</a></h2>
+      <div id="header-line"></div>
+    </div>
+    <div id="content-container">
+      <div id="code-description">
+        <!--INSERT <p/> here for code desc-->
+        <p>
+          JS supports three different value comparison equality operations, but
+          we will only focus on two of them as they are more widely used: strict
+          equality comparison (<code>===</code>, AKA "identity", "tripe equals")
+          and abstract equality comparsion (<code>==</code>, AKA "loose
+          equality", "double equals").
+        </p>
+        <p>
+          Loose equality (<code>==</code>) compares two values
+          <i>after</i> performing a <b>type conversion</b> to the values being
+          compared. A full list of the conversions can be found
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#loose_equality_using_"
+            target="_blank"
+          >
+            here</a
+          >. Common cases are shown in this example: string representing a
+          number value when compared to the number itself evaluates to
+          <code>true</code>. Values that are considered <b>falsy</b> in JS that
+          are compared using <code>==</code> evaluates to <code>true</code>.
+          Falsy values in JS are values that are considered
+          <code>false</code> in the context of booleans. In JS, these values
+          include: <code>false</code>, <code>0</code>, <code>-0</code>,
+          <code>0n</code>, <code>""</code>, <code>null</code>,
+          <code>undefined</code>, and <code>NaN</code>. An array compared to a
+          string that is equal to the values in the array separated by a
+          comma(",") evalues to <code>true</code>.
+        </p>
+        <p>
+          Strict equality (<code>===</code>) compares two values
+          <i>without</i> performing any type conversion. Strict equality
+          evalutes to <code>true</code> if the values have the same type, are
+          not numbers and have the same value OR if both values are numbers,
+          then only if they are both not <code>NaN</code>, and are the same
+          value or if one is <code>+0</code> and the other is <code>-0</code>.
+        </p>
+        <p>
+          When comparing two objects of the same structure, both loose equality
+          and strict equality will return <code>false</code>, unless you are
+          comparing an object to itself.
+        </p>
+        <p>
+          In most cases, using loose equality is highly discouraged due to
+          predictability of type conversion.
+        </p>
+      </div>
+      <div id="code-container">
+        <div id="code-editor">
+          <div id="code-editor-top-button-container">
+            <a href="./">
+              <div
+                class="code-editor-top-button"
+                id="code-editor-close-button"
+              ></div>
+            </a>
+            <a href="./">
+              <div
+                class="code-editor-top-button"
+                id="code-editor-minimize-button"
+              ></div>
+            </a>
+            <a
+              target="_blank"
+              href="https://codepen.io/pr0grammar-the-selector/pen/abwZXqq"
+            >
+              <div
+                class="code-editor-top-button"
+                id="code-editor-expand-button"
+              ></div>
+            </a>
+          </div>
+          <!--INSERT code lines here -->
+          <div id="code-editor-content">
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">1</span>
+              <span class="code-editor-keyword">function </span>
+              <span class="code-editor-normal">helloWorld() </span>
+              <span class="code-editor-normal">{</span>
+            </div>
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">2</span>
+              <span class="code-editor-space"></span>
+              <span class="code-editor-space"></span>
+              <span class="code-editor-space"></span>
+              <span class="code-editor-space"></span>
+              <span class="code-editor-normal"
+                >console.log(<span class="code-editor-string"
+                  >"Hello World!"</span
+                >);</span
+              >
+            </div>
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">3</span>
+              <span class="code-editor-normal">}</span>
+            </div>
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">4</span>
+            </div>
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">5</span>
+              <span class="code-editor-normal">helloWorld();</span>
+            </div>
+          </div>
+        </div>
+        <div id="console">
+          <!--INSERT console lines here -->
+          <div class="console-line">
+            <span class="console-line-string">"Hello World!"</span>
+          </div>
+          <div id="console-enter-cmd-container">
+            <span id="console-cmd-arrow">> </span>
+            <span id="console-blinking-cursor">|</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <!--Add the source to the file-->
+      <p>
+        by <a target="_blank" href="https://www.nehalp.com">NP Zed</a> |
+        <a href="https://github.com/PR0Grammar/js-by-example" target="_blank"
+          >source</a
+        >
+        |
+        <a
+          target="_blank"
+          href="https://codepen.io/pr0grammar-the-selector/pen/abwZXqq"
+          >open in online editor</a
+        >
+      </p>
+    </div>
+  </body>
+</html>
