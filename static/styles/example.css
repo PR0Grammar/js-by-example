@@ -126,6 +126,8 @@ code {
   color: #55718d;
   user-select: none;
   margin-right: 12px;
+  width: 24px;
+  display: inline-block;
 }
 
 .code-editor-keyword {
