@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--INSERT topic name here --->
+
+    <title>Equality | JS by Example</title>
+    <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/example.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../images/javascript_favicon.png"
+    />
+  </head>
+
+  <body>
+    <div>
+      <!--INSERT topic name here --->
+      <h2 id="header"><a href="./">Javascript by Example: Equality</a></h2>
+      <div id="header-line"></div>
+    </div>
+    <div id="content-container">
+      <div id="code-description">
+        <!--INSERT <p/> here for code desc-->
+        <p>
+          JS supports three different value comparison equality operations, but
+          we will only focus on two of them as they are more widely used: strict
+          equality comparison (<code>===</code>, AKA "identity", "tripe equals")
+          and abstract equality comparsion (<code>==</code>, AKA "loose
+          equality", "double equals").
+        </p>
+        <p>
+          Loose equality (<code>==</code>) compares two values
+          <i>after</i> performing a <b>type conversion</b> to the values being
+          compared. A full list of the conversions can be found
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#loose_equality_using_"
+            target="_blank"
+          >
+            here</a
+          >. Common cases are shown in this example:
+        </p>
+        <p>
+          (a) string representing a number value when compared to the number
+          itself evaluates to
+          <code>true</code>.
+        </p>
+        <p>
+          (b) Values that are considered <b>falsy</b> in JS that are compared
+          using <code>==</code> evaluates to <code>true</code>. Falsy values in
+          JS are values that are considered <code>false</code> in the context of
+          booleans. In JS, these values include: <code>false</code>,
+          <code>0</code>, <code>-0</code>, <code>0n</code>, <code>""</code>,
+          <code>null</code>, <code>undefined</code>, and <code>NaN</code>. The
+          exception to this rule is <code>NaN</code>, which compared to any
+          falsy value, including <code>NaN</code>, returns <code>false</code>
+        </p>
+        <p>
+          (c) An array compared to a string that is equal to the values in the
+          array separated by a comma(",") evaluates to <code>true</code>.
+        </p>
+        <p>
+          Strict equality (<code>===</code>) compares two values
+          <i>without</i> performing any type conversion. Strict equality
+          evalutes to <code>true</code> if the values have the same type, are
+          not numbers and have the same value OR if both values are numbers,
+          then the comparison evaluates to <code>true</code> only if they are
+          both not <code>NaN</code>, and are the same value or if one is
+          <code>+0</code> and the other is <code>-0</code>.
+        </p>
+        <p>
+          When comparing two objects of the same structure, both loose equality
+          and strict equality will return <code>false</code>, unless you are
+          comparing an object to itself (same object in memory).
+        </p>
+        <p>
+          In most cases, using loose equality is highly discouraged due to lack
+          of predictability of type conversion.
+        </p>
+      </div>
+      <div id="code-container">
+        <div id="code-editor">
+          <div id="code-editor-top-button-container">
+            <a href="./">
+              <div
+                class="code-editor-top-button"
+                id="code-editor-close-button"
+              ></div>
+            </a>
+            <a href="./">
+              <div
+                class="code-editor-top-button"
+                id="code-editor-minimize-button"
+              ></div>
+            </a>
+            <a
+              target="_blank"
+              href="https://codepen.io/pr0grammar-the-selector/pen/LYLLZNb?editors=1112"
+            >
+              <div
+                class="code-editor-top-button"
+                id="code-editor-expand-button"
+              ></div>
+            </a>
+          </div>
+          <div id="code-editor-content">
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">1</span>
+
+              <span class="code-editor-normal"
+                ><span class="code-editor-keyword">const</span> obj = {};</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">2</span>
+
+              <span class="code-editor-normal"
+                ><span class="code-editor-keyword">const</span> arr = [];</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">3</span>
+
+              <span class="code-editor-normal"></span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">4</span>
+
+              <span class="code-editor-comment"
+                >// **** Loose equality ****</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">5</span>
+
+              <span class="code-editor-normal"
+                >console.log(<span class="code-editor-string">"123"</span> ==
+                <span class="code-editor-number">123</span>);
+                <span class="code-editor-comment">// True</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">6</span>
+
+              <span class="code-editor-normal"
+                >console.log(<span class="code-editor-weird-val"
+                  >undefined</span
+                >
+                == <span class="code-editor-weird-val">null</span>);
+                <span class="code-editor-comment">// True</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">7</span>
+
+              <span class="code-editor-normal"
+                >console.log(<span class="code-editor-bool">false</span> ==
+                <span class="code-editor-number">0</span>);
+                <span class="code-editor-comment">// True</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">8</span>
+
+              <span class="code-editor-normal"
+                >console.log(<span class="code-editor-weird-val">NaN</span> ==
+                <span class="code-editor-bool">false</span>);
+                <span class="code-editor-comment">// False</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">9</span>
+
+              <span class="code-editor-normal"
+                >console.log(<span class="code-editor-weird-val">NaN</span> ==
+                <span class="code-editor-weird-val">NaN</span>);
+                <span class="code-editor-comment">// False</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">10</span>
+
+              <span class="code-editor-normal"
+                >console.log([<span class="code-editor-number">1</span>,
+                <span class="code-editor-number">2</span>,
+                <span class="code-editor-number">3</span>] ==
+                <span class="code-editor-string">"1,2,3"</span>);
+                <span class="code-editor-comment">// True</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">11</span>
+
+              <span class="code-editor-normal"
+                >console.log(<span class="code-editor-string">"abc"</span> ==
+                <span class="code-editor-string">"abc"</span>);
+                <span class="code-editor-comment">// True</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">12</span>
+
+              <span class="code-editor-normal"
+                >console.log({} == {});
+                <span class="code-editor-comment">// False</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">13</span>
+
+              <span class="code-editor-normal"
+                >console.log([] == []);
+                <span class="code-editor-comment">// False</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">14</span>
+
+              <span class="code-editor-normal"
+                >console.log(obj == obj);
+                <span class="code-editor-comment">// True</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">15</span>
+
+              <span class="code-editor-normal"
+                >console.log(arr == arr);
+                <span class="code-editor-comment">// True</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">16</span>
+
+              <span class="code-editor-normal"></span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">17</span>
+
+              <span class="code-editor-comment"
+                >// **** Strict equality ****</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">18</span>
+
+              <span class="code-editor-normal"
+                >console.log(<span class="code-editor-string">"123"</span> ===
+                <span class="code-editor-number">123</span>);
+                <span class="code-editor-comment">// False</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">19</span>
+
+              <span class="code-editor-normal"
+                >console.log(<span class="code-editor-weird-val"
+                  >undefined</span
+                >
+                === <span class="code-editor-weird-val">null</span>);
+                <span class="code-editor-comment">// False</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">20</span>
+
+              <span class="code-editor-normal"
+                >console.log(<span class="code-editor-bool">false</span> ===
+                <span class="code-editor-number">0</span>);
+                <span class="code-editor-comment">// False</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">21</span>
+
+              <span class="code-editor-normal"
+                >console.log(<span class="code-editor-weird-val">NaN</span> ===
+                <span class="code-editor-bool">false</span>);
+                <span class="code-editor-comment">// False</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">22</span>
+
+              <span class="code-editor-normal"
+                >console.log(<span class="code-editor-weird-val">NaN</span> ===
+                <span class="code-editor-weird-val">NaN</span>);
+                <span class="code-editor-comment">// False</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">23</span>
+
+              <span class="code-editor-normal"
+                >console.log([<span class="code-editor-number">1</span>,
+                <span class="code-editor-number">2</span>,
+                <span class="code-editor-number">3</span>] ===
+                <span class="code-editor-string">"1,2,3"</span>);
+                <span class="code-editor-comment">// False</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">24</span>
+
+              <span class="code-editor-normal"
+                >console.log(<span class="code-editor-string">"abc"</span> ===
+                <span class="code-editor-string">"abc"</span>);
+                <span class="code-editor-comment">// True</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">25</span>
+
+              <span class="code-editor-normal"
+                >console.log({} === {});
+                <span class="code-editor-comment">// False</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">26</span>
+
+              <span class="code-editor-normal"
+                >console.log([] === []);
+                <span class="code-editor-comment">// False</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">27</span>
+
+              <span class="code-editor-normal"
+                >console.log(obj === obj);
+                <span class="code-editor-comment">// True</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">28</span>
+
+              <span class="code-editor-normal"
+                >console.log(arr === arr);
+                <span class="code-editor-comment">// True</span></span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">29</span>
+
+              <span class="code-editor-normal"></span>
+            </div>
+          </div>
+        </div>
+        <div id="console">
+          <!--- TODO --->
+
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div id="console-enter-cmd-container">
+            <span id="console-cmd-arrow">> </span>
+            <span id="console-blinking-cursor">|</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <!--Add the source to the file-->
+      <p>
+        by <a target="_blank" href="https://www.nehalp.com">NP Zed</a> |
+        <a href="https://github.com/PR0Grammar/js-by-example" target="_blank"
+          >source</a
+        >
+        |
+        <a
+          target="_blank"
+          href="https://codepen.io/pr0grammar-the-selector/pen/LYLLZNb"
+          >open in online editor</a
+        >
+      </p>
+    </div>
+  </body>
+</html>

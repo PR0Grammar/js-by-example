@@ -6,5 +6,6 @@
 /hello-world /static/pages/hello-world.html 200
 /data-types /static/pages/data-types.html 200
 /variables /static/pages/variables.html 200
+/equality /static/pages/equality.html 200
 
 /* /static/pages/index.html 200
