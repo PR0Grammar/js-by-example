@@ -59,24 +59,25 @@
         </p>
         <p>
           (c) An array compared to a string that is equal to the values in the
-          array separated by a comma(",") evalues to <code>true</code>.
+          array separated by a comma(",") evaluates to <code>true</code>.
         </p>
         <p>
           Strict equality (<code>===</code>) compares two values
           <i>without</i> performing any type conversion. Strict equality
           evalutes to <code>true</code> if the values have the same type, are
           not numbers and have the same value OR if both values are numbers,
-          then only if they are both not <code>NaN</code>, and are the same
-          value or if one is <code>+0</code> and the other is <code>-0</code>.
+          then the comparison evaluates to <code>true</code> only if they are
+          both not <code>NaN</code>, and are the same value or if one is
+          <code>+0</code> and the other is <code>-0</code>.
         </p>
         <p>
           When comparing two objects of the same structure, both loose equality
           and strict equality will return <code>false</code>, unless you are
-          comparing an object to itself.
+          comparing an object to itself (same object in memory).
         </p>
         <p>
-          In most cases, using loose equality is highly discouraged due to
-          predictability of type conversion.
+          In most cases, using loose equality is highly discouraged due to lack
+          of predictability of type conversion.
         </p>
       </div>
       <div id="code-container">
@@ -378,6 +379,73 @@
         </div>
         <div id="console">
           <!--- TODO --->
+
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">false</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
+          <div class="console-line">
+            <span class="console-line-bool">true</span>
+          </div>
           <div id="console-enter-cmd-container">
             <span id="console-cmd-arrow">> </span>
             <span id="console-blinking-cursor">|</span>
