@@ -49,7 +49,7 @@ if (true) {
   if (true) {
     // This will print
     console.log(10);
-  } else if (false) {
+  } else if (true) {
     console.log(11);
   }
   

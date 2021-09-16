@@ -26,10 +26,7 @@
     <div id="content-container">
       <div id="code-description">
         <!--INSERT <p/> here for code desc-->
-        <p>
-          Conditionals in JS are fairly straightforward, with some slight
-          caveats.
-        </p>
+        <p>Conditionals in JS are fairly straightforward, with some caveats.</p>
         <p>
           <code>if</code> statements in JS execute a specific block of code if a
           condition is <b>truthy</b>. Truthy values in JS are values that are
@@ -55,8 +52,8 @@
           the top level <code>if</code> statement but occur before the
           <code>else</code> statement. In other words, if all the previous
           statements in the conditional chain evaluate to <code>false</code> (if
-          -> else if .... -> else), only the code in the <code>else</code> block
-          is executed.
+          -> else if .... -> else), then only the code in the
+          <code>else</code> block is executed.
         </p>
       </div>
 
@@ -213,7 +210,7 @@
 
               <span class="code-editor-space"> </span>
 
-              <span class="code-editor-normal">
+              <span class="code-editor-comment">
                 // ***** Truthy and Falsy *****</span
               >
             </div>
@@ -226,7 +223,10 @@
               <span class="code-editor-space"> </span>
 
               <span class="code-editor-normal"
-                ><span class="code-editor-keyword">if</span> (0) {</span
+                ><span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-number"
+                  >0</span
+                >) {</span
               >
             </div>
 
@@ -274,7 +274,10 @@
               <span class="code-editor-space"> </span>
 
               <span class="code-editor-normal"
-                ><span class="code-editor-keyword">if</span> (1) {</span
+                ><span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-number"
+                  >1</span
+                >) {</span
               >
             </div>
 
@@ -336,7 +339,10 @@
               <span class="code-editor-space"> </span>
 
               <span class="code-editor-normal"
-                ><span class="code-editor-keyword">if</span> (undefined) {</span
+                ><span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-weird-val"
+                  >undefined</span
+                >) {</span
               >
             </div>
 
@@ -384,7 +390,10 @@
               <span class="code-editor-space"> </span>
 
               <span class="code-editor-normal"
-                ><span class="code-editor-keyword">if</span> (NaN) {</span
+                ><span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-weird-val"
+                  >NaN</span
+                >) {</span
               >
             </div>
 
@@ -432,7 +441,10 @@
               <span class="code-editor-space"> </span>
 
               <span class="code-editor-normal"
-                ><span class="code-editor-keyword">if</span> (!NaN) {</span
+                ><span class="code-editor-keyword">if</span> (!<span
+                  class="code-editor-weird-val"
+                  >NaN</span
+                >) {</span
               >
             </div>
 
@@ -493,7 +505,7 @@
 
               <span class="code-editor-space"> </span>
 
-              <span class="code-editor-normal">
+              <span class="code-editor-comment">
                 // ***** Equality Check *****</span
               >
             </div>
@@ -506,8 +518,11 @@
               <span class="code-editor-space"> </span>
 
               <span class="code-editor-normal"
-                ><span class="code-editor-keyword">if</span> (NaN == NaN)
-                {</span
+                ><span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-weird-val"
+                  >NaN</span
+                >
+                == <span class="code-editor-weird-val">NaN</span>) {</span
               >
             </div>
 
@@ -555,8 +570,11 @@
               <span class="code-editor-space"> </span>
 
               <span class="code-editor-normal"
-                ><span class="code-editor-keyword">if</span> (123 == "123")
-                {</span
+                ><span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-number"
+                  >123</span
+                >
+                == <span class="code-editor-string">"123"</span>) {</span
               >
             </div>
 
@@ -618,8 +636,11 @@
               <span class="code-editor-space"> </span>
 
               <span class="code-editor-normal"
-                ><span class="code-editor-keyword">if</span> (123 === "123")
-                {</span
+                ><span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-number"
+                  >123</span
+                >
+                === <span class="code-editor-string">"123"</span>) {</span
               >
             </div>
 
@@ -724,7 +745,7 @@
               <span class="code-editor-normal">
                 } <span class="code-editor-keyword">else if</span> (<span
                   class="code-editor-bool"
-                  >false</span
+                  >true</span
                 >) {</span
               >
             </div>
@@ -1061,6 +1082,28 @@
         <div id="console">
           <!--- TODO --->
           <div id="console-enter-cmd-container">
+            <div class="console-line">
+              <span class="console-line-number">0</span>
+            </div>
+            <div class="console-line">
+              <span class="console-line-number">3</span>
+            </div>
+            <div class="console-line">
+              <span class="console-line-number">6</span>
+            </div>
+            <div class="console-line">
+              <span class="console-line-number">8</span>
+            </div>
+            <div class="console-line">
+              <span class="console-line-number">10</span>
+            </div>
+            <div class="console-line">
+              <span class="console-line-number">14</span>
+            </div>
+            <div class="console-line">
+              <span class="console-line-number">18</span>
+            </div>
+
             <span id="console-cmd-arrow">> </span>
             <span id="console-blinking-cursor">|</span>
           </div>
@@ -1077,7 +1120,7 @@
         |
         <a
           target="_blank"
-          href="https://codepen.io/pr0grammar-the-selector/pen/abwZXqq"
+          href="https://codepen.io/pr0grammar-the-selector/pen/QWgMKqb?editors=0011"
           >open in online editor</a
         >
       </p>
