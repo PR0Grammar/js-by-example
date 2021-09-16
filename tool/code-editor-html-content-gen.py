@@ -106,6 +106,10 @@ def genCodeEditor(code_lines_html, online_editor_link):
             </div>
             <div id="console">
             <!--- TODO --->
+                <div id="console-enter-cmd-container">
+                    <span id="console-cmd-arrow">> </span>
+                    <span id="console-blinking-cursor">|</span>
+                </div>
             </div>
         </div>
     """.format(code_lines_html = " ".join(code_lines_html), online_editor_link = online_editor_link)
