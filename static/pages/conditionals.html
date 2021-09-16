@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--INSERT topic name here --->
+
+    <title>Conditionals (If/Else) | JS by Example</title>
+    <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/example.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../images/javascript_favicon.png"
+    />
+  </head>
+
+  <body>
+    <div>
+      <!--INSERT topic name here --->
+      <h2 id="header">
+        <a href="./">Javascript by Example: Conditionals (If/Else)</a>
+      </h2>
+      <div id="header-line"></div>
+    </div>
+    <div id="content-container">
+      <div id="code-description">
+        <!--INSERT <p/> here for code desc-->
+        <p>Conditionals in JS are fairly straightforward, with some caveats.</p>
+        <p>
+          <code>if</code> statements in JS execute a specific block of code if a
+          condition is <b>truthy</b>. Truthy values in JS are values that are
+          considered <code>true</code> in the context of booleans. Truthy values
+          in JS are all values that are not considered <b>falsy</b>. The falsy
+          values are: <code>false</code>, <code>0</code>, <code>-0</code>,
+          <code>0n</code>, <code>""</code>, <code>null</code>,
+          <code>undefined</code>, and <code>NaN</code>.
+        </p>
+        <p>
+          JS supports <code>else if</code> statements.
+          <code>else if</code> statements execute a piece of code if the
+          condition is truthy AND if the top level <code>if</code> statement and
+          previous <code>else if</code> statements (if there are any) are
+          evaluated to <code>false</code>. You can view it similar to a
+          <code>switch</code> statement, where you have a chain of conditions
+          that you are checking (if -> else if -> else if -> else if...).
+        </p>
+        <p>
+          <code>else</code> statements include a block of code that is executed
+          if the top level <code>if</code> statement evaluates to
+          <code>false</code> AND any <code>else if</code> statements that follow
+          the top level <code>if</code> statement but occur before the
+          <code>else</code> statement. In other words, if all the previous
+          statements in the conditional chain evaluate to <code>false</code> (if
+          -> else if .... -> else), then only the code in the
+          <code>else</code> block is executed.
+        </p>
+      </div>
+
+      <div id="code-container">
+        <div id="code-editor">
+          <div id="code-editor-top-button-container">
+            <a href="./">
+              <div
+                class="code-editor-top-button"
+                id="code-editor-close-button"
+              ></div>
+            </a>
+            <a href="./">
+              <div
+                class="code-editor-top-button"
+                id="code-editor-minimize-button"
+              ></div>
+            </a>
+            <a
+              target="_blank"
+              href="https://codepen.io/pr0grammar-the-selector/pen/QWgMKqb?editors=0011"
+            >
+              <div
+                class="code-editor-top-button"
+                id="code-editor-expand-button"
+              ></div>
+            </a>
+          </div>
+          <div id="code-editor-content">
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">1</span>
+
+              <span class="code-editor-comment"
+                >// ***** Using booleans *****</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">2</span>
+
+              <span class="code-editor-normal"
+                ><span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-bool"
+                  >true</span
+                >) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">3</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-comment"> // This will print</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">4</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">0</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">5</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> }</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">6</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> </span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">7</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"
+                ><span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-bool"
+                  >false</span
+                >) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">8</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">1</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">9</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> }</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">10</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> </span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">11</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-comment">
+                // ***** Truthy and Falsy *****</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">12</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"
+                ><span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-number"
+                  >0</span
+                >) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">13</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">2</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">14</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> }</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">15</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> </span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">16</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"
+                ><span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-number"
+                  >1</span
+                >) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">17</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-comment"> // This will print</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">18</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">3</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">19</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> }</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">20</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> </span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">21</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"
+                ><span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-weird-val"
+                  >undefined</span
+                >) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">22</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">4</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">23</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> }</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">24</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> </span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">25</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"
+                ><span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-weird-val"
+                  >NaN</span
+                >) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">26</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">5</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">27</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> }</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">28</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> </span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">29</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"
+                ><span class="code-editor-keyword">if</span> (!<span
+                  class="code-editor-weird-val"
+                  >NaN</span
+                >) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">30</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-comment"> // This will print</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">31</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">6</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">32</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> }</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">33</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> </span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">34</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-comment">
+                // ***** Equality Check *****</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">35</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"
+                ><span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-weird-val"
+                  >NaN</span
+                >
+                == <span class="code-editor-weird-val">NaN</span>) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">36</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">7</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">37</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> }</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">38</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> </span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">39</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"
+                ><span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-number"
+                  >123</span
+                >
+                == <span class="code-editor-string">"123"</span>) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">40</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-comment"> // This will print</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">41</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">8</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">42</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> }</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">43</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> </span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">44</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"
+                ><span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-number"
+                  >123</span
+                >
+                === <span class="code-editor-string">"123"</span>) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">45</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">9</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">46</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> }</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">47</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> </span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">48</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-comment"> // ***** Else If ******</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">49</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                <span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-bool"
+                  >true</span
+                >) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">50</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-comment"> // This will print</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">51</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">10</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">52</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                } <span class="code-editor-keyword">else if</span> (<span
+                  class="code-editor-bool"
+                  >true</span
+                >) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">53</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">11</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">54</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> }</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">55</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> </span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">56</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                <span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-bool"
+                  >false</span
+                >) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">57</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">12</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">58</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                } <span class="code-editor-keyword">else if</span> (<span
+                  class="code-editor-bool"
+                  >false</span
+                >) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">59</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">13</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">60</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                } <span class="code-editor-keyword">else if</span> (<span
+                  class="code-editor-bool"
+                  >true</span
+                >) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">61</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-comment"> // This will print</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">62</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">14</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">63</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                } <span class="code-editor-keyword">else if</span> (<span
+                  class="code-editor-bool"
+                  >false</span
+                >) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">64</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">15</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">65</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> }</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">66</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> </span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">67</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-comment"> // ***** Else ******</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">68</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                <span class="code-editor-keyword">if</span> (<span
+                  class="code-editor-bool"
+                  >false</span
+                >) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">69</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">16</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">70</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                } <span class="code-editor-keyword">else if</span> (<span
+                  class="code-editor-bool"
+                  >false</span
+                >) {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">71</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">17</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">72</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                } <span class="code-editor-keyword">else</span> {</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">73</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-comment"> // This will print</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">74</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal">
+                console.log(<span class="code-editor-number">18</span>);</span
+              >
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">75</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> }</span>
+            </div>
+
+            <div class="code-editor-line">
+              <span class="code-editor-line-index">76</span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-space"> </span>
+
+              <span class="code-editor-normal"> </span>
+            </div>
+          </div>
+        </div>
+        <div id="console">
+          <!--- TODO --->
+          <div id="console-enter-cmd-container">
+            <div class="console-line">
+              <span class="console-line-number">0</span>
+            </div>
+            <div class="console-line">
+              <span class="console-line-number">3</span>
+            </div>
+            <div class="console-line">
+              <span class="console-line-number">6</span>
+            </div>
+            <div class="console-line">
+              <span class="console-line-number">8</span>
+            </div>
+            <div class="console-line">
+              <span class="console-line-number">10</span>
+            </div>
+            <div class="console-line">
+              <span class="console-line-number">14</span>
+            </div>
+            <div class="console-line">
+              <span class="console-line-number">18</span>
+            </div>
+
+            <span id="console-cmd-arrow">> </span>
+            <span id="console-blinking-cursor">|</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <!--Add the source to the file-->
+      <p>
+        by <a target="_blank" href="https://www.nehalp.com">NP Zed</a> |
+        <a href="https://github.com/PR0Grammar/js-by-example" target="_blank"
+          >source</a
+        >
+        |
+        <a
+          target="_blank"
+          href="https://codepen.io/pr0grammar-the-selector/pen/QWgMKqb?editors=0011"
+          >open in online editor</a
+        >
+      </p>
+    </div>
+  </body>
+</html>
