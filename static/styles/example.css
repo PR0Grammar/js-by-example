@@ -1,5 +1,38 @@
+@media only screen and (max-device-width: 480px) {
+  p,
+  .code-editor-line,
+  .console-line {
+    font-size: 12px;
+  }
+
+  #header {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
+  p,
+  .code-editor-line,
+  .console-line {
+    font-size: 14px;
+  }
+
+  #header {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) {
+  p {
+    font-size: 20px;
+  }
+
+  #header {
+    font-size: 32px;
+  }
+}
+
 p {
-  font-size: 20px;
   line-height: 1.5;
 }
 
@@ -20,7 +53,6 @@ code {
 /* Header */
 
 #header {
-  font-size: 32px;
   margin-bottom: 32px;
   margin-left: 12px;
 }
@@ -176,7 +208,6 @@ code {
 
 .console-line {
   border-bottom: 1px solid #ffffff;
-  font-size: 14px;
   display: flex;
   align-items: center;
   padding: 20px;
